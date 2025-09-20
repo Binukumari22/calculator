@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    <script language="javascript" type = "text/javascript">
+        let contact1 ={
+            name : 'Anna',
+            phone : 9034561823,
+            email : 'anna@gmail.com',
+            getInfo: function() {return('The email of ' + this.name + ' is ' + this.email + ' and phone number is ' + this.phone);
+            }
+           
+        };
+            
+           function printContactInfo(contact){
+                console.log(contact.getInfo());
+            }
+            let contact2 ={
+            name : 'Joy',
+            phone : 8963981821,
+            email : 'joy@gmail.com',
+            getInfo: function() {return('The email of ' + contact2.name + ' is ' + contact2.email + ' and phone number is ' + contact2.phone);
+            }
+           
+        };
+           printContactInfo(contact1);
+           printContactInfo(contact2);
+
+                </script>
+    </body>
+</html>  
