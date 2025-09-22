@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    <script language="javascript" type = "text/javascript">
+        let userProfile ={
+            Username : ' CoolUser99 ',
+            bio : ' I LOVE coding! javascript is Great!!! ',
+                         } 
+            function cleanUserBio(Profile) {
+                var cleanname = Profile.Username.trim().toLowerCase();
+                var cleanbio = Profile.bio.trim().toLowerCase();
+                cleanbio = cleanbio.replace("javascript","Js");
+                
+                      
+                           
+                var len = (cleanbio.length);
+                return {
+                    Username: cleanname, 
+                    bio: cleanbio,
+                    length: len
+                };
+            }
+              let result = cleanUserBio(userProfile);
+               console.log(result);
+                </script>
+    </body>
+    </html>
+          
