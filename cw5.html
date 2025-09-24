@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<button onclick="returnchecking()">click me</button>
+<p id="demo"></p>
+
+<script>
+   let order = {
+        itemName: 'fruits',
+        isDelivered: true,
+        daysSinceDelivery: 17,
+                }
+function returnchecking() {
+  var x = (order.isDelivered) && (order.daysSinceDelivery <= 7) ? "eligible for return" : "return period is expired";
+  
+ document.getElementById("demo").innerHTML = x ;
+ console.log("itemName exist" , "itemName" in order);
+ delete order.daysSinceDelivery;
+ console.log(order);
+}
+
+</script>
+
+
+
+</body>
+</html> 
