@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+    </head>
+    <body>
+        <button onclick="accesscheck()">click here!!</button>
+<p id="check"></p>
+        <script>
+            let user = {
+             username : 'Kallu',
+            age : 23,
+            admin : 'true',
+            }
+            function accesscheck() {
+  var x = (user.admin) && (user.age >= 18) ? "Access granted" : "Access denied";
+            document.getElementById("check").innerHTML = x ;
+             console.log("age exist" , "age" in user);
+ delete user.age;
+ console.log(user);
+            }
+
+        </script>
+    </body>
+ 
