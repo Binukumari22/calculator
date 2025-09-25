@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var product = ["Mango" , "Apple" , "Strawberry"];
+            var price = [150,250,200];
+            let productlist = [];
+            for (i = 0; i < product.length; i ++)
+            {
+                productlist.push("product: " + product[i] + "- price:" + price[i]);
+            }
+            console.log("All products:");
+            for (let item of productlist){
+                console.log(item);
+            }
+          console.log("products with price > 50 :" );
+            for (let i = 0; i< price.length; i ++){
+                if (price[i] > 50){
+                    console.log("product: " + product[i] + "- price:" + price[i]);
+                }
+            }
+         
+          
+          product.push("Watermelon");
+          price.push("80");
+           productlist.push("product: Watermelon - price: 80 ");
+
+           console.log("updated product list:");
+           for (let item of productlist){
+            console.log(item);
+           }
+
+        </script>
+        </body>
+        </html>
