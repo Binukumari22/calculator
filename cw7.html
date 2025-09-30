@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        let friend = {
+             name :"Anu",
+             birthdate :"2020-07-04"
+                   };
+
+        function getBirthdayDetails(friend) {
+            
+            let birthdateObj = new Date(friend.birthdate);
+
+                        let year = birthdateObj.getFullYear();
+            let monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+            let month = monthNames[birthdateObj.getMonth()];
+            let day = birthdateObj.getDate();
+
+            let today = new Date();
+            let age = today.getFullYear() - year;
+
+            if (
+                today.getMonth() < birthdateObj.getMonth() ||
+                (today.getMonth() === birthdateObj.getMonth() && today.getDate() < day)
+            ) {
+                age--;
+            }
+
+            return friend.name + " was born on " + day + " " + month + " " + year + " and is " + age + " years old";
+        }
+
+       
+        console.log(getBirthdayDetails(friend));
+
+    </script>
+</body>
