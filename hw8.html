@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+    let guess = false;
+    
+
+    for (let i = 1; i <= 5; i++) {
+        let A = parseInt(prompt("Enter a number between 1 and 5"));
+
+        
+        if (A < 1 || A > 5 ) {
+            console.log("Invalid input");
+            continue; 
+        }
+
+        
+        switch (A) {
+            case 1: console.log("The number you entered: One"); break;
+            case 2: console.log("The number you entered: Two"); break;
+            case 3: console.log("The number you entered: Three"); break;
+            case 4: console.log("The number you entered: Four"); break;
+            case 5: console.log("The number you entered: Five"); break;
+        }
+
+        if (A === 3) {
+            console.log("You guessed it right!");
+            guess = true;
+            break; 
+        } else {
+            console.log("Wrong guess. Try again");
+        }
+    }
+
+    if (!guess) {
+        console.log("Game over");
+    }
+</script>
+</body>
+</html>
