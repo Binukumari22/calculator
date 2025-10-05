@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+  
+    for( i = 0 ; i<5 ; i++)
+    {
+         let A = parseInt(prompt("Enter the product code (1 to 3)"));
+    let B = parseInt(prompt("Enter the quantity purchased"));
+    let price = 0;
+    if (A<1 || A>3){
+        console.log("invalid product code");
+        continue;
+          }
+
+        switch (A) {
+            case 1: price = 30 * B;
+            console.log("The price for apple is " + price);break;
+            case 1: price = 10 * B;
+            console.log("The price for banana is " + price);break;
+            case 1: price = 50 * B;
+            console.log("The price for mango is " + price);break;
+            
+                }
+        if (price > 100 ){
+            console.log("High price");
+        }
+        else{
+            console.log("Normal price");
+        }
+    }
+    </script>
+    </body>
+    </html>
