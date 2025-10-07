@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    let comment = prompt("Enter the comment");
+    let newcomment = comment.replace(/\b(bad|ugly|stupid)\b/gi,"***");
+    let numberCount = (comment.match(/\d/g)).length;
+    let capitalCount = (comment.match(/\b[A-Z][a-zA-Z]*/g) || []).length;
+    console.log("New Comment:", newcomment);
+    console.log("Number Count:", numberCount);
+    console.log("Capitalized Word Count:", capitalCount);
+  </script>
+  </body>
+  </html>
