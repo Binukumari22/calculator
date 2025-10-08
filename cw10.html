@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+  try{
+    let person = {
+        name: "Kevin",
+        email: "kevin@gmail.com",
+        message: "Hi"
+
+    }
+    let details = JSON.parse('{ "name":"Kevin", "email":"kevin@gmail.com", "message":"Hi"}');
+    console.log(details.name);
+    console.log(details.email);
+    console.log(details.message);
+var greeting = (name) => "Message received from " + name;
+  console.log(greeting("Kevin"));
+  }
+  catch(err) {
+    console.log("Invalid JSON");
+  }
+
+
+
+    </script>
+    </body>
+    </html>
