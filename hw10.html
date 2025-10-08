@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+try {
+    let feedback = JSON.parse('{ "message": "I like your service,thankyou" }');
+    console.log(feedback.message);
+    var checkFeedback = (msg) => {
+       if (/thank/i.test(msg)) {
+            console.log("Positive feedback received");
+        } else {
+            console.log("Feedback noted");
+        }
+    };
+
+     checkFeedback(feedback.message);
+}
+catch (error) {
+    console.log("Invalid JSON");
+}
+</script>
+</body>
+</html>
