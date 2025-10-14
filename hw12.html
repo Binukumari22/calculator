@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  
+
+  <form id="form">
+    Name: <input type="text" id="name"><br><br>
+    Feedback: <textarea id="feedback"></textarea><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="message" style="color:green; display:none;">Thanks for your feedback!</p>
+
+  <h3>Submitted Feedback:</h3>
+  <div id="display"></div>
+
+  <script>
+    let form = document.getElementById("form");
+    let message = document.getElementById("message");
+    let display = document.getElementById("display");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); 
+
+      let name = document.getElementById("name").value;
+      let feedback = document.getElementById("feedback").value;
+
+     
+      display.innerHTML = "<p><b>" + name + ":</b> " + feedback + "</p>";
+
+  
+      message.style.display = "block";
+
+      setTimeout(function() {
+        message.style.display = "none";
+      }, 5000);
+
+   
+      let p = display.querySelector("p");
+      p.addEventListener("mouseover", function() {
+        p.style.color = "blue";
+      });
+      p.addEventListener("mouseout", function() {
+        p.style.color = "black";
+      });
+
+    
+    });
+  </script>
+
+</body>
+</html>
